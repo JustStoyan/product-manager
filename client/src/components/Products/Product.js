@@ -1,9 +1,11 @@
 const Product = props => {
     return (
-        <div>
-            <h3>{props.name}</h3>
-            <p>{`${props.price} / ${props.currency}`}</p>
-        </div>
+        <tr>
+            <td>{props.name}</td>
+            <td>{props.price}</td>
+            <td>{props.currency}</td>
+            <td>{props.actions}</td>
+        </tr>
     )
 }
 

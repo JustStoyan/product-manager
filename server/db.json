@@ -20,6 +20,11 @@
     }
   ],
   "permissions": {
-    "permissions": ["CREATE", "READ", "UPDATE", "DELETE"]
+    "permissions": {
+      "CREATE": true,
+      "READ": true,
+      "UPDATE": true,
+      "DELETE": true
+    }
   }
 }
