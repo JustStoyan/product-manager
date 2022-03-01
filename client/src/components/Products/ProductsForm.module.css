@@ -1,0 +1,26 @@
+.productForm {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background-color: rgba(61, 163, 141, 0.692);
+    rotate: 30deg;
+}
+
+.productForm input {
+    border: none;
+    background-color: aqua;
+    height: 40px;
+    width: 200px;
+    
+}
+
+.productForm button {
+    margin:20px 20px;
+    width: 170px;
+    height: 30px;
+    
+}
+
