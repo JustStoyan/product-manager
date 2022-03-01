@@ -1,25 +1,34 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Product from './Product';
 
 
 const ProductsView = props => {
 
-    const products = [];
+    const [productList, setProductList] = useState(null)
+
+
 
     useEffect(() => {
+
+
         fetch('http://localhost:8000/products')
             .then(res => res.json())
-            .then(data => data.forEach(product => products.push(product)))
+            .then(data => { setProductList(data) });
 
-    })
+    }, [])
 
 
 
     return (
         <div>
-            {products.map(product => {
+            {productList && productList.map(product => {
 
-                return <Product key={product.id} name={product.name} price={product.price} currency={product.currency} />
+                return <Product
+                    key={product.id}
+                    name={product.name}
+                    price={product.price}
+                    currency={product.currency}
+                />
             })}
         </div>
 

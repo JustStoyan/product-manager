@@ -1,25 +1,24 @@
 {
   "products": [
     {
-      "name": "table",
+      "name": "Table",
       "price": 100,
       "currency": "USD",
       "id": 1
     },
     {
-      "name": "chair",
+      "name": "Chair",
       "price": 58,
       "currency": "USD",
       "id": 2
     },
     {
-      "name": "knife",
+      "name": "Knife",
       "price": 10,
       "currency": "EUR",
       "id": 3
     }
   ],
-
   "permissions": {
     "permissions": ["CREATE", "READ", "UPDATE", "DELETE"]
   }
