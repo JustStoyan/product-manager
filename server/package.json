@@ -1,0 +1,14 @@
+{
+  "name": "product-manager",
+  "version": "0.0.1",
+  "description": "Product API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stoyan V",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
