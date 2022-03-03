@@ -1,30 +1,40 @@
 {
   "products": [
     {
-      "name": "Table",
-      "price": 100,
-      "currency": "USD",
+      "name": "Airqnche",
+      "price": "0.75",
+      "currency": "sdf",
       "id": 1
     },
     {
-      "name": "Chair",
-      "price": 58,
-      "currency": "USD",
+      "name": "asd",
+      "price": "1234",
+      "currency": "asd",
       "id": 2
     },
     {
-      "name": "Knife",
-      "price": 10,
-      "currency": "EUR",
+      "name": "asdf",
+      "price": "1234",
+      "currency": "asd",
       "id": 3
+    },
+    {
+      "name": "asdf",
+      "price": "1234",
+      "currency": "ads",
+      "id": 4
+    },
+    {
+      "name": "asdf",
+      "price": "123",
+      "currency": "asd",
+      "id": 5
     }
   ],
   "permissions": {
-    "permissions": {
-      "CREATE": true,
-      "READ": true,
-      "UPDATE": true,
-      "DELETE": true
-    }
+    "CREATE": true,
+    "READ": true,
+    "UPDATE": true,
+    "DELETE": true
   }
 }

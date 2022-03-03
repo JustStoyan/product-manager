@@ -1,11 +1,7 @@
 import React from 'react';
 
-let permissons = {};
+let permissionsTo = {};
 
-fetch('http://localhost:8000/permissions')
-    .then(res => res.json())
-    .then(res => permissons = { ...res.permissons })
-
-const PermissionContext = React.createContext(permissons);
+const PermissionContext = React.createContext(permissionsTo);
 
 export default PermissionContext;
