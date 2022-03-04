@@ -1,34 +1,10 @@
 {
   "products": [
     {
-      "name": "Airqnche",
-      "price": "0.75",
-      "currency": "sdf",
+      "name": "yftgfhbi",
+      "price": "8465",
+      "currency": "usd",
       "id": 1
-    },
-    {
-      "name": "asd",
-      "price": "1234",
-      "currency": "asd",
-      "id": 2
-    },
-    {
-      "name": "asdf",
-      "price": "1234",
-      "currency": "asd",
-      "id": 3
-    },
-    {
-      "name": "asdf",
-      "price": "1234",
-      "currency": "ads",
-      "id": 4
-    },
-    {
-      "name": "asdf",
-      "price": "123",
-      "currency": "asd",
-      "id": 5
     }
   ],
   "permissions": {

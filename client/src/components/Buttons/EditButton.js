@@ -1,6 +1,7 @@
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import PermissionContext from "../../context/permission-context";
 import UpdatePopUp from '../PopUps/UpdatePopUp'
+import Button from "../UI/Button";
 
 
 const EditButton = props => {
@@ -12,7 +13,7 @@ const EditButton = props => {
 
     const editRequest = (e) => {
         setId((previd) => previd = e.target.parentNode.id)
-        setCurrentData((prevData) => prevData = e.target.parentNode.firstChild.wholeText)
+        setCurrentData((prevData) => prevData = [e.target.parentNode.children[0].textContent, e.target.parentNode.children[1].textContent, e.target.parentNode.children[2].textContent])
         setPopUp(!popUp);
     }
 
@@ -45,7 +46,7 @@ const EditButton = props => {
     return (
         <>
             {popUp && <UpdatePopUp onEditRequst={editHandler} contentToChange={currentData} />}
-            < button type="button" onClick={editRequest} > Edit</button >
+            < Button type="button" onClick={editRequest} > Edit</Button >
         </>
     )
 }

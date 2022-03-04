@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DeleteProductPopUp from "../PopUps/DeleteProductPopUp";
+import Button from "../UI/Button";
 
 
 const DeleteButton = props => {
@@ -27,7 +28,7 @@ const DeleteButton = props => {
     return (
         <>
             {confirmation && <DeleteProductPopUp onDelete={deleteAction} title="You are about to delete a product!" message="Do you want to delete it?" />}
-            <button type="button" onClick={deleteRequest} >Delete</button>
+            <Button type="button" onClick={deleteRequest} >Delete</Button>
         </>
     )
 }

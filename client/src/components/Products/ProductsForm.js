@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import PermissionContext from '../../context/permission-context';
+import Button from '../UI/Button';
 
 import styles from './ProductsForm.module.css';
 
@@ -63,16 +64,21 @@ const ProductsForm = props => {
     return (
         <>
             {permissionsTo.CREATE && <form onSubmit={addProductHandler} className={styles.productForm}>
-                <label htmlFor="productName">Product Name</label>
-                <input type="text" id="productName" value={productNameValue} onChange={nameHandler} />
-
-                <label htmlFor="productPrice">Price</label>
-                <input type="number" id="productPrice" value={productPriceValue} onChange={priceHandler} />
-
-                <label htmlFor="productCurrency">Currency</label>
-                <input type="text" maxLength='3' id='productCurrency' value={productCurrencyValue} onChange={currencyHandler} />
-
-                <button type="submit">Create</button>
+                <div className={styles.productNameGrid1}>
+                    <label htmlFor="productName">Product Name</label>
+                    <input type="text" id="productName" value={productNameValue} onChange={nameHandler} />
+                </div>
+                <div className={styles.productPriceGrid2}>
+                    <label htmlFor="productPrice">Price</label>
+                    <input type="number" id="productPrice" value={productPriceValue} onChange={priceHandler} />
+                </div>
+                <div className={styles.productCurrencyGrid3}>
+                    <label htmlFor="productCurrency">Currency</label>
+                    <input type="text" maxLength='3' id='productCurrency' value={productCurrencyValue} onChange={currencyHandler} />
+                </div>
+                <div className={styles.btnGrid4}>
+                    <Button type="submit" >Create</Button>
+                </div>
             </form>}
         </>
     )

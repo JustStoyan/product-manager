@@ -5,8 +5,7 @@ import styles from './UpdatePopUp.module.css'
 
 
 const UpdatePopUp = props => {
-
-    const [currentName, currentPrice, currentCurrency] = [...props.contentToChange.split(' ')];
+    const [currentName, currentPrice, currentCurrency] = [...props.contentToChange];
 
     const [name, setName] = useState(currentName);
     const [price, setPrice] = useState(currentPrice);

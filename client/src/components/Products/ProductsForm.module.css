@@ -1,26 +1,66 @@
 .productForm {
-    margin-top: 30px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
-    background-color: rgba(61, 163, 141, 0.692);
-    rotate: 30deg;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 20px;
 }
 
 .productForm input {
-    border: none;
-    background-color: aqua;
-    height: 40px;
-    width: 200px;
-    
+  border: none;
+  height: 40px;
+  width: 60%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 30px;
 }
 
-.productForm button {
-    margin:20px 20px;
-    width: 170px;
-    height: 30px;
-    
+.productNameGrid1  {
+  grid-column: 1 /-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px
+  
 }
 
+.productForm label  {
+  color: grey;
+  text-transform: uppercase;
+  text-shadow: 2px 0.5px rgb(31, 30, 30);
+  font-weight: bold;
+  
+}
+
+.productNameGrid1 input {
+  width: 80%;
+}
+
+.productPriceGrid2 {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap:10px
+}
+
+.productCurrencyGrid3 {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap:10px
+}
+
+.btnGrid4 {
+  grid-column: 1 /-1;
+  display: flex;
+  justify-content: center;
+}
+
+.btnGrid4 button {
+  width: 200px;
+  height: 50px;
+}

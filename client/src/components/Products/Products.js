@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import DeleteButton from '../Buttons/DeleteButton';
 import EditButton from '../Buttons/EditButton';
 import PermissionContext from "../../context/permission-context";
-import DeleteProductPopUp from '../PopUps/DeleteProductPopUp';
+import styles from './Products.module.css'
 
 
 
@@ -16,7 +16,7 @@ const Products = props => {
         setTimeout(() => {
             fetch('http://localhost:8000/products')
                 .then(res => res.json())
-                .then(data => { setProductList(data) });
+                .then(data => { setProductList([...data]) });
         }, 100)
 
 
@@ -34,11 +34,15 @@ const Products = props => {
 
     return (
         <>
-           
+
             {productList && productList.map(product => {
                 return (
-                    <li key={product.id} id={product.id} >
-                        {product.name} {product.price} {product.currency} {permissionsTo.UPDATE && <EditButton onEdit={onEditHandler} />} {permissionsTo.DELETE && <DeleteButton onDelete={onDeleteHandler} />}
+                    <li className={styles.liItem} key={product.id} id={product.id} >
+                        Name:<span id="product-name">{product.name}</span>
+                        Price:<span id="product-price">{product.price}</span>
+                        <span id="product-currency">{product.currency}</span>
+                        {permissionsTo.UPDATE && <EditButton onEdit={onEditHandler} />}
+                        {permissionsTo.DELETE && <DeleteButton onDelete={onDeleteHandler} />}
                     </li>
                 )
             })}
