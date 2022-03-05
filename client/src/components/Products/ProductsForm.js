@@ -7,12 +7,10 @@ import styles from './ProductsForm.module.css';
 
 const ProductsForm = props => {
 
-
-
     const [productNameValue, setProductNameValue] = useState('');
     const [productPriceValue, setProductPriceValue] = useState('');
     const [productCurrencyValue, setProductCurrencyValue] = useState('');
-    const permissionsTo = useContext(PermissionContext)
+    const permissions = useContext(PermissionContext)
 
 
     const nameHandler = e => {
@@ -24,7 +22,11 @@ const ProductsForm = props => {
     }
 
     const currencyHandler = e => {
-        setProductCurrencyValue(e.target.value)
+        let letters = /^[A-Za-z]*$/;
+        if (letters.test(e.target.value)) {
+            return setProductCurrencyValue(e.target.value)
+        }
+
     }
 
     const addProductHandler = e => {
@@ -55,15 +57,11 @@ const ProductsForm = props => {
             setProductPriceValue('');
             setProductCurrencyValue('');
         }
-
-
-
-
     }
 
     return (
         <>
-            {permissionsTo.CREATE && <form onSubmit={addProductHandler} className={styles.productForm}>
+            {permissions.permissions.CREATE && <form onSubmit={addProductHandler} className={styles.productForm}>
                 <div className={styles.productNameGrid1}>
                     <label htmlFor="productName">Product Name</label>
                     <input type="text" id="productName" value={productNameValue} onChange={nameHandler} />

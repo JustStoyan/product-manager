@@ -8,13 +8,17 @@ import styles from './ProductsView.module.css'
 const ProductsView = props => {
 
 
-    const permissionsTo = useContext(PermissionContext)
+    const permissions = useContext(PermissionContext)
 
     return (
         <>
             {
-                permissionsTo.READ && < div className={styles.wrapper}>
-                    <ul className={styles.list} ><Products /></ul>
+                permissions.permissions.READ && < div className={styles.wrapper}>
+
+                    <ul className={styles.productList} >
+                        <h2 className={styles.title}>Products</h2>
+                        <Products />
+                    </ul>
                 </div >
             }
         </>

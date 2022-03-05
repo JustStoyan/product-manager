@@ -1,0 +1,15 @@
+.wrapper {
+    position: absolute;
+    left:20px;
+    top: 20px;
+    font-size: 40px;
+}
+
+.wrapper:hover{
+    cursor: pointer;
+    font-size: 42px;
+}
+
+.wrapper:active{
+    transform: rotate(-45deg);
+}

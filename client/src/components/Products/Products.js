@@ -41,8 +41,8 @@ const Products = props => {
                         Name:<span id="product-name">{product.name}</span>
                         Price:<span id="product-price">{product.price}</span>
                         <span id="product-currency">{product.currency}</span>
-                        {permissionsTo.UPDATE && <EditButton onEdit={onEditHandler} />}
-                        {permissionsTo.DELETE && <DeleteButton onDelete={onDeleteHandler} />}
+                        {permissionsTo.permissions.UPDATE && <EditButton onEdit={onEditHandler} />}
+                        {permissionsTo.permissions.DELETE && <DeleteButton onDelete={onDeleteHandler} />}
                     </li>
                 )
             })}
