@@ -12,8 +12,8 @@ const EditButton = props => {
     const [popUp, setPopUp] = useState(false);
 
     const editRequest = (e) => {
-        setId((previd) => previd = e.target.parentNode.id)
-        setCurrentData((prevData) => prevData = [e.target.parentNode.children[0].textContent, e.target.parentNode.children[1].textContent, e.target.parentNode.children[2].textContent])
+        setId((previd) => previd = e.target.parentNode.parentNode.id)
+        setCurrentData((prevData) => prevData = [e.target.parentNode.parentNode.children[0].textContent, e.target.parentNode.parentNode.children[1].textContent, e.target.parentNode.parentNode.children[2].textContent])
         setPopUp(!popUp);
     }
 
@@ -29,12 +29,10 @@ const EditButton = props => {
                 headers: { "Content-type": "application/json; charset=UTF-8" }
 
             })
-                .then(res => res.json())
-                .then(json => setCurrentData((prevData) => prevData = `${json.name} ${json.price} ${json.currency}`))
+               
                 .catch(err => console.log(err))
 
         } else {
-            console.log('Nothing was changed')
         }
         setPopUp(!popUp);
         permissionContext.RERENDER();

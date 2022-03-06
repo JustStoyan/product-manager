@@ -1,52 +1,74 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.781);
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.781);
+}
+
+.modal {
+  position: fixed;
+  top: 30vh;
+  left: 10%;
+  width: 80%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.header {
+  background: rgb(58, 52, 52);
+  padding: 1rem;
+  text-align: center;
+}
+
+.header h3 {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 3px;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(37, 35, 35);
+}
+
+.content input {
+  border-radius: 10px;
+  text-align: center;
+  height: 25px;
+}
+
+.content label {
+  text-transform: uppercase;
+  letter-spacing: -0.5;
+  margin-bottom: 2px;
+}
+
+.actions {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.actions button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor:not-allowed;
   
+}
+
+@media (min-width: 768px) {
   .modal {
-    position: fixed;
-    top: 30vh;
-    left: 10%;
-    width: 80%;
-    z-index: 100;
-    overflow: hidden;
+    left: calc(50% - 20rem);
+    width: 40rem;
   }
-  
-  .header {
-    background:  rgb(58, 52, 52);
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .header h3 {
-    margin: 0;
-    color: white;
-    text-transform: uppercase;
-  }
-  
-  .content {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    color: rgb(37, 35, 35);
-    
-  }
-  
-  .actions {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  @media (min-width: 768px) {
-    .modal {
-      left: calc(50% - 20rem);
-      width: 40rem;
-    }
-  }
+}

@@ -10,7 +10,7 @@ const DeleteButton = props => {
 
 
     const deleteRequest = (e) => {
-        setCurrentProduct((prevState) => prevState = e.target.parentNode.id)
+        setCurrentProduct((prevState) => prevState = e.target.parentNode.parentNode.id)
         setConfirmation(!confirmation)
     }
 

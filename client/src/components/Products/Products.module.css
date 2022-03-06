@@ -1,8 +1,66 @@
-.liItem {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap:3px;
-    color:hsla(0, 5%, 8%, 0.904)
+th,
+td {
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+td {
+  font-size: 18px;
+}
+
+th {
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+.productActions {
+  display: flex;
+  gap: 10px;
+}
+
+.productName {
+  font-weight: bold;
+}
+
+.productPrice {
+  font-style: italic;
+}
+
+.productCurrency {
+    font-style: italic;
+    font-weight: bold;
+    
+  }
+
+@media screen and (max-width: 940px) {
+  th,
+  td {
+    text-align: center;
+    padding-right: 30px;
+  }
+
+  th {
+    text-transform: uppercase;
+    font-size: 22px;
+    padding-right: 3px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  th,
+  td {
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  th {
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-right: 3px;
+  }
+
+  td {
+    font-size: 15px;
+  }
 }

@@ -24,7 +24,7 @@ const ProductsForm = props => {
     const currencyHandler = e => {
         let letters = /^[A-Za-z]*$/;
         if (letters.test(e.target.value)) {
-            return setProductCurrencyValue(e.target.value)
+            return setProductCurrencyValue((e.target.value).toUpperCase())
         }
 
     }

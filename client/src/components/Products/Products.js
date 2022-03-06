@@ -5,12 +5,9 @@ import PermissionContext from "../../context/permission-context";
 import styles from './Products.module.css'
 
 
-
-
 const Products = props => {
     const [productList, setProductList] = useState([]);
     const permissionsTo = useContext(PermissionContext);
-
 
     useEffect(() => {
         setTimeout(() => {
@@ -22,31 +19,40 @@ const Products = props => {
 
     }, [permissionsTo.RERENDER]);
 
-
     const onDeleteHandler = id => {
         const newProductList = productList.filter(product => product.id !== Number(id));
         setProductList(newProductList);
     }
 
-    const onEditHandler = id => {
-
-    }
-
     return (
         <>
+            <table className={styles.wrapper}>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Currency</th>
 
-            {productList && productList.map(product => {
-                return (
-                    <li className={styles.liItem} key={product.id} id={product.id} >
-                        Name:<span id="product-name">{product.name}</span>
-                        Price:<span id="product-price">{product.price}</span>
-                        <span id="product-currency">{product.currency}</span>
-                        {permissionsTo.permissions.UPDATE && <EditButton onEdit={onEditHandler} />}
-                        {permissionsTo.permissions.DELETE && <DeleteButton onDelete={onDeleteHandler} />}
-                    </li>
-                )
-            })}
+                    </tr>
+                </thead>
+                <tbody>
+                    {productList && productList.map(product => {
+                        return (
+                            <tr className={styles.liItem} key={product.id} id={product.id} >
+                                <td className={styles.productName}>{product.name}</td>
+                                <td className={styles.productPrice}>{product.price}</td>
+                                <td className={styles.productCurrency}>{product.currency}</td>
+                                <td className={styles.productActions}>
+                                    {permissionsTo.permissions.UPDATE && <EditButton />}
+                                    {permissionsTo.permissions.DELETE && <DeleteButton onDelete={onDeleteHandler} />}
+                                </td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </table>
         </>
+
     )
 
 

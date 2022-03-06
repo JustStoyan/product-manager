@@ -1,34 +1,22 @@
 {
   "products": [
     {
-      "name": "asdf",
-      "price": "1234",
-      "currency": "123",
+      "name": "Table",
+      "price": "100",
+      "currency": "BGN",
+      "id": 1
+    },
+    {
+      "name": "Chair",
+      "price": "20",
+      "currency": "BGN",
+      "id": 2
+    },
+    {
+      "name": "Napkins",
+      "price": "5",
+      "currency": "BGN",
       "id": 3
-    },
-    {
-      "name": "1234",
-      "price": "1234",
-      "currency": "231",
-      "id": 4
-    },
-    {
-      "name": "1234",
-      "price": "1234",
-      "currency": "123",
-      "id": 5
-    },
-    {
-      "name": "234",
-      "price": "1234",
-      "currency": "123",
-      "id": 6
-    },
-    {
-      "name": "1234",
-      "price": "1234",
-      "currency": "123",
-      "id": 7
     }
   ],
   "permissions": {

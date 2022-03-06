@@ -15,10 +15,10 @@ const ProductsView = props => {
             {
                 permissions.permissions.READ && < div className={styles.wrapper}>
 
-                    <ul className={styles.productList} >
+                    <div className={styles.productsList} >
                         <h2 className={styles.title}>Products</h2>
                         <Products />
-                    </ul>
+                    </div>
                 </div >
             }
         </>
